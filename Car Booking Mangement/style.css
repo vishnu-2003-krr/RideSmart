@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+label, input {
+    margin: 10px 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#car-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.car-option {
+    width: 45%;
+    cursor: pointer;
+    margin: 10px 0;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.car-option img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-option p {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.car-option.selected {
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.qr-code {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}

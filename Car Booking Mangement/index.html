@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Car Booking System</h1>
+        
+        <!-- Car Selection with Images -->
+        <div id="car-selection">
+            <div class="car-option" data-rate="25" data-car="Swift" onclick="selectCar(this)">
+                <img src="swift.jpg" alt="Swift">
+                <p>Swift - ₹25 per km</p>
+            </div>
+            <div class="car-option" data-rate="40" data-car="Innova" onclick="selectCar(this)">
+                <img src="innova.jpg" alt="Innova">
+                <p>Innova - ₹40 per km</p>
+            </div>
+            <div class="car-option" data-rate="25" data-car="Indiga" onclick="selectCar(this)">
+                <img src="indiga.jpg" alt="Indiga">
+                <p>Indiga - ₹25 per km</p>
+            </div>
+            <div class="car-option" data-rate="40" data-car="Scorpio" onclick="selectCar(this)">
+                <img src="scorpio.jpg" alt="Scorpio">
+                <p>Scorpio - ₹40 per km</p>
+            </div>
+        </div>
+
+        <!-- Input fields for locations -->
+        <label for="start-location">Starting Location:</label>
+        <input type="text" id="start-location" placeholder="Enter start location">
+        
+        <label for="end-location">Destination:</label>
+        <input type="text" id="end-location" placeholder="Enter destination">
+        
+        <button onclick="calculateFare()">Calculate Fare</button>
+
+        <!-- Display Total Price -->
+        <div id="result"></div>
+        
+        <!-- QR Code for UPI Payment -->
+        <div id="payment-section" style="display: none;">
+            <h3>Pay via UPI</h3>
+            <img src="upi-qr-code.png" alt="UPI QR Code" class="qr-code">
+        </div>
+    </div>
+
+    <!-- Include the Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+    <script src="script.js"></script>
+</body>
+</html>
